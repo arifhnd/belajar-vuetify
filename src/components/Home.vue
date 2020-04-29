@@ -1,8 +1,8 @@
 <template>
-  <v-app style="background-image: ('/assets/background.jpg')">
+  <v-app>
     <Navbar/>
     <v-content>
-      <router-view></router-view>
+      <TodayClasses/>
     </v-content>
     <BottomNav/>
   </v-app>
@@ -10,13 +10,16 @@
 
 <script>
 import Navbar from './components/Navbar';
+import TodayClasses from './components/TodayClasses';
 import BottomNav from './components/BottomNav';
 
 export default {
-  name: 'App',
+  name: 'Home',
+
   components: {
+    TodayClasses,
     Navbar,
-    BottomNav
-  }
+    BottomNav,
+  },
 };
 </script>
